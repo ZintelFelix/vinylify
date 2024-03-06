@@ -11,9 +11,12 @@ export const metadata: Metadata = {
   title: `Next.js Blog Example with ${CMS_NAME}`,
   description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
   openGraph: {
-    images: [HOME_OG_IMAGE_URL],
+    images: [{ url: HOME_OG_IMAGE_URL }], // Update the structure of the images array
   },
+  metadataBase: new URL('https://your-domain.com'), // Erstellen Sie ein URL-Objekt mit der Basis-URL
 };
+
+
 
 export default function RootLayout({
   children,
