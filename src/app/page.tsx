@@ -1,5 +1,4 @@
 import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
 import { Intro } from "@/app/_components/intro";
 import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "../lib/api";
@@ -12,19 +11,15 @@ export default function Index() {
   const morePosts = allPosts.slice(1);
 
   return (
-    <main>
-      <Container>
-        <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </main>
+<main>
+  <Container>
+    <Intro />
+    <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
+      My Vinyl Records
+    </h2>
+    {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+  </Container>
+</main>
+
   );
 }
