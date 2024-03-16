@@ -8,15 +8,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `Vinylify`,
+  description: `A blog using Next.js and ${CMS_NAME}.`,
   openGraph: {
     images: [{ url: HOME_OG_IMAGE_URL }], // Update the structure of the images array
   },
   metadataBase: new URL('https://your-domain.com'), // Erstellen Sie ein URL-Objekt mit der Basis-URL
 };
-
-
 
 export default function RootLayout({
   children,
