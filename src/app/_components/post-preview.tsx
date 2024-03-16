@@ -20,7 +20,7 @@ export function PostPreview({
 }: Props) {
   return (
     <div>
-      <div className="mb-1 border flex justify-end">
+      <div className="mb-1 border flex justify-end items-center">
         <CoverImage slug={slug} title={title} src={coverImage} />
         <div className="flex-grow font-bold">
           <div>
