@@ -61,3 +61,20 @@ Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&ut
 # Notes
 
 `blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
+
+# Template Style
+
+Within the `_post` directory, create a new Markdown file for a new Vinyl post.
+
+```
+--- markdown
+title: ""
+artist: ""
+yor: ""
+genre: ""
+excerpt: ""
+coverImage: ""
+ogImage:
+  url: ""
+--- 
+```
