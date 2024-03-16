@@ -7,6 +7,9 @@ type Props = {
   coverImage: string;
   excerpt: string;
   slug: string;
+  artist: string;
+  genre: string;
+  yor: string;
 };
 
 export function PostPreview({
@@ -17,16 +20,18 @@ export function PostPreview({
 }: Props) {
   return (
     <div>
-      <div className="mb-5">
+      <div className="mb-1 border flex justify-end">
         <CoverImage slug={slug} title={title} src={coverImage} />
+        <div className="flex-grow font-bold"> 
+          {title}
+        </div>
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
+      <h3 className="text-2xl leading-snug">
         <Link
           as={`/posts/${slug}`}
           href="/posts/[slug]"
           className="hover:underline"
         >
-          {title}
         </Link>
       </h3>
     </div>
