@@ -2,7 +2,6 @@ import Footer from "@/app/_components/footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Image from 'next/image';
 
 import "./globals.css";
 
@@ -22,6 +21,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const images = [
+    { url: 'public/assets/bg/vinylgreyedout.png'}
+  ];
   return (
     <html lang="en">
       <head>
@@ -58,14 +60,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={inter.className}>
-        <div className="absolute -z-10">
-        <Image 
-          src="/assets/bg/vinylgreyedout.png" 
-          alt="Vinyl greyed out"
-          width={1920}
-          height={1080}
-          />
-        </div>
+        <div className="absolute -z-10"></div>
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
