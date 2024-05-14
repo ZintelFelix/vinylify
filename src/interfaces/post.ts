@@ -1,3 +1,13 @@
+import { PrismaClient, Prisma } from '@prisma/client'
+
+const prisma = new PrismaClient()
+
+const post = await prisma.post.findUnique({
+  where: {
+    id: 01,
+  },
+})
+
 export type Post = {
   slug: string;
   title: string;
