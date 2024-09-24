@@ -1,4 +1,5 @@
 import { CMS_NAME } from "@/lib/constants";
+import EmblaCarousel from "./carousel/mainCarousel";
 
 export function Intro() {
   return (
