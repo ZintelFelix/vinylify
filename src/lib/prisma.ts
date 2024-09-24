@@ -1,17 +1,17 @@
-// src/lib/prisma.ts
 import { PrismaClient } from '@prisma/client';
 
 let prisma: PrismaClient;
 
-if (process.env.NODE_ENV === 'production') {
-  // In production, we create a new Prisma Client instance
+if (process.env.NODE_ENV === "production") {
   prisma = new PrismaClient();
 } else {
-  // In development, we check if global.prisma is defined
-  if (!global.prisma) {
-    global.prisma = new PrismaClient();
+  let globalWithPrisma = global as typeof globalThis & {
+    prisma: PrismaClient;
+  };
+  if (!globalWithPrisma.prisma) {
+    globalWithPrisma.prisma = new PrismaClient();
   }
-  prisma = global.prisma;
+  prisma = globalWithPrisma.prisma;
 }
 
 export default prisma;

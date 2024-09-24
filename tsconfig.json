@@ -30,9 +30,8 @@
   },
   "include": [
     "next-env.d.ts",
-    "src/**/*",  // Include all TypeScript files in the src directory
     ".next/types/**/*.ts"
-  ],
+, "global.d.ts"  ],
   "exclude": [
     "node_modules"
   ]
