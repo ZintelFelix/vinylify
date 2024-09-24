@@ -4,7 +4,7 @@ const prisma = new PrismaClient()
 
 const post = await prisma.post.findUnique({
   where: {
-    id: 01,
+    id: 0o1,
   },
 })
 
